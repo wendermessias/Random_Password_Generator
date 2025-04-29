@@ -170,7 +170,24 @@ body.dark-theme {
 }
 
 .generate-btn:hover {
-  background: #CF73FE; /* Roxo mais claro ao passar o mouse */
+  background: #CF73FE;
+}
+
+#copyright {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  font-weight: 100;
+  color: #FFFFFD;
+}
+#copyright a {
+  margin-left: 0.25rem;
+  text-decoration: none;
+  color: #452eb6;
+}
+#copyright a:hover {
+  color: #CF73FE;
 }
 
 /* Responsivo */
@@ -187,5 +204,8 @@ body.dark-theme {
   .generate-btn {
     padding: 12px 0;
     font-size: 0.95rem;
+  }
+  #copyright {
+    font-size: 0.9rem;
   }
 }
