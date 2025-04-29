@@ -1,0 +1,185 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Temas */
+body.light-theme {
+  background: #f0f2f5;
+  color: #000;
+}
+
+body.dark-theme {
+  background: #121212;
+  color: #fff;
+}
+
+/* Container Principal */
+.container {
+  width: 100%;
+  max-width: 550px;
+  background: var(--container-bg, #8c92bb);
+  border-radius: 8px;
+  box-shadow: 
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 20px;
+  margin: 30px auto;
+}
+
+/* Botão de tema dentro da container */
+.theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.theme-toggle button {
+  background: #46496e;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-toggle button:hover {
+  background: #363952;
+}
+
+.container p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #858bb2;
+}
+
+.wrapper {
+  margin-top: 20px;
+}
+
+/* Caixa de input da senha */
+.input-box {
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+  height: 50px;
+  background: #858bb2;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1.5px;
+  border: 1px solid #000;
+  padding: 0 3rem 0 1rem;
+}
+
+.input-box span {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+}
+
+.input-box span:hover {
+  color: #46495e;
+}
+
+/* Barra de tamanho */
+.pass-length {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.pass-length label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.pass-length input[type="range"] {
+  width: 100%;
+}
+
+/* Configurações */
+.pass-settings {
+  margin-top: 20px;
+}
+
+.pass-settings .title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 1.1rem;
+}
+
+.pass-settings .options {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pass-settings .option {
+  width: 48%;
+  display: flex;
+  align-items: center;
+}
+
+.option input {
+  margin-right: 8px;
+}
+
+.option label {
+  font-size: 0.9rem;
+}
+
+/* Botão gerar senha */
+.generate-btn {
+  margin-top: 20px;
+  width: 100%;
+  background: #46496e;
+  color: white;
+  padding: 15px 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.generate-btn:hover {
+  background: #46495e;
+}
+
+/* Responsivo */
+@media (max-width: 450px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .input-box input {
+    height: 45px;
+  }
+
+  .generate-btn {
+    padding: 12px 0;
+    font-size: 0.95rem;
+  }
+}
