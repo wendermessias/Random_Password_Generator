@@ -190,22 +190,34 @@ body.dark-theme {
   color: #CF73FE;
 }
 
-/* Responsivo */
-@media (max-width: 450px) {
+/*Responsividade*/
+
+ @media (max-width: 450px) {
+  button {
+    font-size: 0.8rem;
+  }
+  .theme-toggle button {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
   .container {
-    margin: 10px;
-    padding: 15px;
+    margin: 20px 0;
+    padding: 16px;
   }
 
   .input-box input {
-    height: 45px;
+    height: 40px;
+    font-size: 0.7rem;
   }
 
   .generate-btn {
-    padding: 12px 0;
-    font-size: 0.95rem;
+    padding: 8px ;
+    font-size: 0.7rem;
   }
+
   #copyright {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
+
+  
 }
