@@ -8,48 +8,50 @@
 
 /* Temas */
 body.light-theme {
-  background: #f0f2f5;
-  color: #000;
+  background: #f0f2f5; /* Mantendo o fundo claro padrão */
+  color: #16323D; /* Texto principal mais escuro */
 }
 
 body.dark-theme {
-  background: #121212;
-  color: #fff;
+  background: #121212; /* Mantendo o fundo escuro padrão */
+  color: #FFFFFD; /* Texto principal claro para o tema escuro */
+  
 }
 
-/* Container Principal */
-.container {
-  width: 100%;
-  max-width: 550px;
-  background: var(--container-bg, #8c92bb);
-  border-radius: 8px;
-  box-shadow: 
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  padding: 20px;
-  margin: 30px auto;
-}
-
-/* Botão de tema dentro da container */
+/* Botão de trocar tema */
 .theme-toggle {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 10px;
 }
 
 .theme-toggle button {
-  background: #46496e;
-  color: #fff;
+  background: #C242FF; /* Roxo */
+  color: #FFFFFD; /* Branco */
   border: none;
-  padding: 8px 16px;
+  padding: 10px 20px;
   font-weight: bold;
-  font-size: 0.9rem;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .theme-toggle button:hover {
-  background: #363952;
+  background: #CF73FE; /* Roxo mais claro */
+}
+
+/* Container Principal */
+.container {
+  width: 100%;
+  max-width: 570px;
+  background: #16323D; /* Cinza escuro */
+  background-color: #000;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  padding: 20px ;
+  margin: 40px  auto;
+  
 }
 
 .container p {
@@ -57,7 +59,8 @@ body.dark-theme {
   font-size: 1.5rem;
   text-align: center;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #858bb2;
+  border-bottom: 1px solid #858bb2; /* Mantenha ou ajuste conforme necessário */
+  color: #CF73FE; /* Roxo mais claro para o título */
 }
 
 .wrapper {
@@ -72,13 +75,12 @@ body.dark-theme {
 .input-box input {
   width: 100%;
   height: 50px;
-  background: #858bb2;
-  color: #fff;
+  color: #FFFFFD; /* Branco para o texto da senha */
   font-size: 1rem;
   font-weight: 500;
   border-radius: 5px;
   letter-spacing: 1.5px;
-  border: 1px solid #000;
+  border: 1px solid #000; /* Mantenha ou ajuste a cor da borda */
   padding: 0 3rem 0 1rem;
 }
 
@@ -91,11 +93,11 @@ body.dark-theme {
   align-items: center;
   font-weight: 600;
   cursor: pointer;
-  color: #000;
+  color: #FFFFFD; /* Branco para o ícone de copiar */
 }
 
 .input-box span:hover {
-  color: #46495e;
+  color: #CF73FE; /* Roxo mais claro ao passar o mouse */
 }
 
 /* Barra de tamanho */
@@ -109,13 +111,15 @@ body.dark-theme {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 5px;
+  color: #FFFFFD; /* Branco para o label */
 }
 
 .pass-length input[type="range"] {
   width: 100%;
+  /* Você pode precisar adicionar estilos específicos para a track e thumb do range */
 }
 
-/* Configurações */
+/* Configurações de opções */
 .pass-settings {
   margin-top: 20px;
 }
@@ -125,6 +129,7 @@ body.dark-theme {
   margin-bottom: 10px;
   display: block;
   font-size: 1.1rem;
+  color: #CF73FE; /* Roxo mais claro para o título das configurações */
 }
 
 .pass-settings .options {
@@ -139,6 +144,7 @@ body.dark-theme {
   width: 48%;
   display: flex;
   align-items: center;
+  color: #FFFFFD; /* Branco para as opções */
 }
 
 .option input {
@@ -153,7 +159,7 @@ body.dark-theme {
 .generate-btn {
   margin-top: 20px;
   width: 100%;
-  background: #46496e;
+  background: #C242FF; /* Roxo */
   color: white;
   padding: 15px 0;
   font-size: 1rem;
@@ -164,7 +170,7 @@ body.dark-theme {
 }
 
 .generate-btn:hover {
-  background: #46495e;
+  background: #CF73FE; /* Roxo mais claro ao passar o mouse */
 }
 
 /* Responsivo */

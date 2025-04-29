@@ -53,9 +53,9 @@ function copyPassword() {
   document.execCommand('copy');
   passwordInput.disabled = true;
 
-  copyButton.textContent = 'Copiado!';
+  copyButton.textContent = 'Copied';
   setTimeout(() => {
-    copyButton.textContent = 'Copiar';
+    copyButton.textContent = 'Copy';
   }, 2000);
 }
 
