@@ -42,7 +42,6 @@ body.dark-theme {
 .container {
   width: 100%;
   max-width: 570px;
-  background: #16323D; /* Cinza escuro */
   background-color: #000;
   border: 2px solid #ffffff;
   border-radius: 8px;
@@ -173,8 +172,6 @@ body.dark-theme {
 
 /* Texto de força da senha */
 #password-strength-text {
-  font-size: 14px;
-  font-weight: bold;
   margin-top: 5px;
   display: block;
 }
@@ -230,6 +227,7 @@ body.dark-theme {
   .container {
       margin: 54px 0;
       padding: 26px;
+
   }
 
   .input-box input {
