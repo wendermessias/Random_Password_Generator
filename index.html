@@ -1,73 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Password Generator</title>
-  <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="/index.css">
+
 </head>
 <body class="light-theme">
 
-  <div class="container">
-    <!-- Botão de tema dentro da container -->
-    <div class="theme-toggle">
-      <button onclick="toggleTheme()">Switch Theme</button>
+    <div class="container">
+        <div class="theme-toggle">
+            <button onclick="toggleTheme()">Switch Theme</button>
+        </div>
+
+        <p>Password Generator</p>
+
+        <div class="wrapper">
+            <div class="input-box">
+                <input id="password" type="text" disabled oninput="updatePasswordStrength()">
+                <span id="copy" onclick="copyPassword()">Copy</span>
+            </div>
+            <!-- barra colorida -->
+            <div id="password-strength-bar" class="password-strength"></div>
+            <span id="password-strength-text"></span>
+
+
+            <div class="pass-length">
+                <label for="lengthRange">Password Length: <span id="lengthValue">10</span></label>
+                <input type="range" id="lengthRange" min="4" max="37" value="10" oninput="updateLengthValue()">
+            </div>
+
+            <div class="pass-settings">
+                <label class="title">Password Settings</label>
+                <ul class="options">
+                    <li class="option">
+                        <input checked id="lowercase" type="checkbox" onchange="updatePasswordStrength()">
+                        <label for="lowercase">Lowercase (a-z)</label>
+                    </li>
+                    <li class="option">
+                        <input id="uppercase" type="checkbox" onchange="updatePasswordStrength()">
+                        <label for="uppercase">Uppercase (A-Z)</label>
+                    </li>
+                    <li class="option">
+                        <input id="numbers" type="checkbox" checked onchange="updatePasswordStrength()">
+                        <label for="numbers">Numbers (0-9)</label>
+                    </li>
+                    <li class="option">
+                        <input id="symbols" type="checkbox" checked onchange="updatePasswordStrength()">
+                        <label for="symbols">Symbols (!-$^+)</label>
+                    </li>
+                    <li class="option">
+                        <input id="exc-duplicate" type="checkbox">
+                        <label for="exc-duplicate">Exclude Duplicate</label>
+                    </li>
+                    <li class="option">
+                        <input id="spaces" type="checkbox" onchange="updatePasswordStrength()">
+                        <label for="spaces">Include Spaces</label>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="generate-btn" onclick="generatePassword()">Generate Password</button>
+        </div>
+        <div id="copyright">
+            &#169
+            2025 all rights reserved to <a href="https://github.com/wendermessias" target="_blank" rel="noopener noreferrer">WENDER MESSIAS</a>
+        </div>
     </div>
 
-    <p>Password Generator</p>
-
-    <div class="wrapper">
-      <div class="input-box">
-        <input id="password" type="text" disabled>
-        <span id="copy" onclick="copyPassword()">Copy</span>
-      </div>
-
-      <!-- Barra de comprimento -->
-      <div class="pass-length">
-        <label for="lengthRange">Password Length: <span id="lengthValue">12</span></label>
-        <input type="range" id="lengthRange" min="4" max="37" value="12" oninput="updateLengthValue()">
-      </div>
-
-      <!-- Configurações -->
-      <div class="pass-settings">
-        <label class="title">Password Settings</label>
-        <ul class="options">
-          <li class="option">
-            <input checked id="lowercase" type="checkbox">
-            <label for="lowercase">Lowercase (a-z)</label>
-          </li>
-          <li class="option">
-            <input id="uppercase" type="checkbox">
-            <label for="uppercase">Uppercase (A-Z)</label>
-          </li>
-          <li class="option">
-            <input id="numbers" type="checkbox" checked>
-            <label for="numbers">Numbers (0-9)</label>
-          </li>
-          <li class="option">
-            <input id="symbols" type="checkbox" checked>
-            <label for="symbols">Symbols (!-$^+)</label>
-          </li>
-          <li class="option">
-            <input id="exc-duplicate" type="checkbox">
-            <label for="exc-duplicate">Exclude Duplicate</label>
-          </li>
-          <li class="option">
-            <input id="spaces" type="checkbox">
-            <label for="spaces">Include Spaces</label>
-          </li>
-        </ul>
-      </div>
-
-      <button class="generate-btn" onclick="generatePassword()">Generate Password</button>
-    </div>
-    <div id="copyright">
-      &#169
-      2025 all rights reserved to <a href="https://github.com/wendermessias" target="_blank" rel="noopener noreferrer">WENDER MESSIAS</a>
-  </div>
-  </div>
-  
-
-  <script src="/script.js"></script>
+    <script src="/index.js"></script>
 </body>
 </html>

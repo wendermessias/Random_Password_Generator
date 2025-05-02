@@ -15,7 +15,7 @@ body.light-theme {
 body.dark-theme {
   background: #121212; /* Mantendo o fundo escuro padrão */
   color: #FFFFFD; /* Texto principal claro para o tema escuro */
-  
+
 }
 
 /* Botão de trocar tema */
@@ -47,11 +47,11 @@ body.dark-theme {
   border: 2px solid #ffffff;
   border-radius: 8px;
   box-shadow:
-    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
-    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   padding: 20px ;
   margin: 40px  auto;
-  
+
 }
 
 .container p {
@@ -75,12 +75,12 @@ body.dark-theme {
 .input-box input {
   width: 100%;
   height: 50px;
-  color: #FFFFFD; /* Branco para o texto da senha */
+  color: #FFFFFD;
   font-size: 1rem;
   font-weight: 500;
   border-radius: 5px;
   letter-spacing: 1.5px;
-  border: 1px solid #000; /* Mantenha ou ajuste a cor da borda */
+  border: 1px solid #000;
   padding: 0 3rem 0 1rem;
 }
 
@@ -93,11 +93,11 @@ body.dark-theme {
   align-items: center;
   font-weight: 600;
   cursor: pointer;
-  color: #FFFFFD; /* Branco para o ícone de copiar */
+  color: #FFFFFD; 
 }
 
 .input-box span:hover {
-  color: #CF73FE; /* Roxo mais claro ao passar o mouse */
+  color: #CF73FE; 
 }
 
 /* Barra de tamanho */
@@ -116,7 +116,7 @@ body.dark-theme {
 
 .pass-length input[type="range"] {
   width: 100%;
-  /* Você pode precisar adicionar estilos específicos para a track e thumb do range */
+  height: 18px;
 }
 
 /* Configurações de opções */
@@ -154,12 +154,37 @@ body.dark-theme {
 .option label {
   font-size: 0.9rem;
 }
+/* Barra de força da senha */
+.password-strength {
+  height: 8px;
+  width: 18rem;
+  margin-top: 5px;
+  border-radius: 2px;
+}
+.weak {
+  background-color: red;
+}
+.medium {
+  background-color: yellow;
+}
+.strong {
+  background-color: green;
+}
+
+/* Texto de força da senha */
+#password-strength-text {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 5px;
+  display: block;
+}
+
 
 /* Botão gerar senha */
 .generate-btn {
   margin-top: 20px;
   width: 100%;
-  background: #C242FF; /* Roxo */
+  background: #C242FF;
   color: white;
   padding: 15px 0;
   font-size: 1rem;
@@ -184,40 +209,49 @@ body.dark-theme {
 #copyright a {
   margin-left: 0.25rem;
   text-decoration: none;
-  color: #452eb6;
+  color: #CF73FE;
 }
 #copyright a:hover {
-  color: #CF73FE;
+  color: #2F0B55;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /*Responsividade*/
 
- @media (max-width: 450px) {
+@media (max-width: 450px) {
   button {
-    font-size: 0.8rem;
+      font-size: 0.8rem;
   }
   .theme-toggle button {
-    padding: 5px;
-    font-size: 0.8rem;
+      padding: 5px;
+      font-size: 0.8rem;
   }
   .container {
-    margin: 20px 0;
-    padding: 16px;
+      margin: 54px 0;
+      padding: 26px;
   }
 
   .input-box input {
-    height: 40px;
-    font-size: 0.7rem;
+      height: 40px;
+      font-size: 0.7rem;
   }
 
   .generate-btn {
-    padding: 8px ;
-    font-size: 0.7rem;
+      padding: 8px ;
+      font-size: 0.7rem;
   }
 
   #copyright {
-    font-size: 0.7rem;
+      font-size: 0.7rem;
   }
-
+}
+@media (max-width: 300px) {
+  .password-strength {
+    height: 8px;
+    width: 10rem;
+    margin-top: 5px;
+    border-radius: 2px;
+  }
   
 }
