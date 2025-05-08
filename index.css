@@ -8,14 +8,13 @@
 
 /* Temas */
 body.light-theme {
-  background: #f0f2f5; /* Mantendo o fundo claro padrão */
+  background-color: #ffffff;/* Mantendo o fundo claro padrão */
   color: #16323D; /* Texto principal mais escuro */
 }
 
 body.dark-theme {
   background: #121212; /* Mantendo o fundo escuro padrão */
   color: #FFFFFD; /* Texto principal claro para o tema escuro */
-
 }
 
 /* Botão de trocar tema */
@@ -32,10 +31,12 @@ body.dark-theme {
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 3px 4px 1px 0px  #2F0B55;
 }
-
-.theme-toggle button:hover {
-  background: #CF73FE; /* Roxo mais claro */
+.theme-toggle button:active{
+  box-shadow: none;
+  position: relative;
+  top: 10px;
 }
 
 /* Container Principal */
@@ -145,7 +146,6 @@ body.dark-theme {
   align-items: center;
   color: #FFFFFD; /* Branco para as opções */
 }
-
 .option input {
   margin-right: 8px;
 }
@@ -153,26 +153,32 @@ body.dark-theme {
 .option label {
   font-size: 0.9rem;
 }
+
 /* Barra de força da senha */
 .password-strength {
   height: 8px;
-  width: 18rem;
   margin-top: 5px;
   border-radius: 2px;
 }
 .weak {
+  width: 33.3%;
   background-color: red;
+  box-shadow: 0 0 1px #f00, 0 0 2px #f00, 0 0 8px #f00;
 }
 .medium {
+  width: 66.6%;
   background-color: yellow;
+  box-shadow: 0 0 1px #eedc3d, 0 0 2px #eedc3d, 0 0 8px #eedc3d;
 }
 .strong {
+  width: 100%;
   background-color: green;
+  box-shadow: 0 0 1px #18e605, 0 0 2px #18e605, 0 0 8px #18e605;
 }
 
 /* Texto de força da senha */
 #password-strength-text {
-  margin-top: 5px;
+  margin-top: 10px;
   display: block;
 }
 
@@ -202,20 +208,21 @@ body.dark-theme {
   padding: 1.5rem;
   font-weight: 100;
   color: #FFFFFD;
+  
 }
+
 #copyright a {
-  margin-left: 0.25rem;
+  margin-left: 0.40rem;
   text-decoration: none;
-  color: #CF73FE;
-}
-#copyright a:hover {
-  color: #2F0B55;
-  font-size: 18px;
-  font-weight: bold;
+  color:#ffffff;
+  filter: drop-shadow(2px 2px 20px #CF73FE);
+  box-shadow: 2px 2px 20px #CF73FE;
+
+  /* filter: drop-shadow(2px 2px 20px #2F0B55); */
+  box-shadow: 2px 2px 20px #2F0B55;
 }
 
 /*Responsividade*/
-
 @media (max-width: 450px) {
   button {
       font-size: 0.8rem;
@@ -227,29 +234,26 @@ body.dark-theme {
   .container {
       margin: 54px 0;
       padding: 26px;
-
   }
-
   .input-box input {
       height: 40px;
       font-size: 0.7rem;
   }
-
   .generate-btn {
       padding: 8px ;
       font-size: 0.7rem;
   }
-
   #copyright {
-      font-size: 0.7rem;
+   font-size: 0.7rem;
+  }
+  #copyright a {
+    text-align: center;
+    font-size: 0.7rem;
   }
 }
-@media (max-width: 300px) {
-  .password-strength {
-    height: 8px;
-    width: 10rem;
-    margin-top: 5px;
-    border-radius: 2px;
+@media(max-width: 500px){
+  #copyright a {
+    text-align: center;
+    font-size: 0.7rem;
   }
-  
 }
