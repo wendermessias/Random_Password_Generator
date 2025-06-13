@@ -16,7 +16,3 @@
      src="./assets/random-password-generator.gif" 
      width="500"
 />
-
-<!-- <video 
-    src="./assets/random-password-generator.mp4"  loop autoplay muted >
-</video> -->
