@@ -12,7 +12,4 @@
 </p>
 <p>Além dessas funcionalidades, o aplicativo conta com um botão de copiar para que o usuário possa transferir a senha gerada para a área de transferência com maior praticidade. Essas funcionalidades permitem a criação de senhas altamente seguras e adaptáveis a diversos requisitos de dispositivos e plataformas.</p>
 
-<img alt="random-password-generator" 
-     src="./assets/random-password-generator.gif" 
-     width="500"
-/>
+<img alt="random-password-generator" src="./assets/random-password-generator.gif" width="500"/>
